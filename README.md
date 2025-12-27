@@ -7,7 +7,7 @@ This project implements a computer vision pipeline to detect, track, and visuali
 
 The system processes all provided input videos from the volleyball category and generates:
 
-- An annotated video with bounding boxes and IDs
+- An annotated video with bounding boxes and internally consistent tracking
 - A frame-synchronized 2D tactical map showing entity positions over time
 
 Tracked entities include:
@@ -45,7 +45,8 @@ To improve accuracy and reduce detection of non-relevant people:
 ### 3.3 Multi-Object Tracking
 
 - YOLOv8’s built-in tracking (persist=True) is used to maintain stable IDs across frames.
-- Each detected entity is assigned a consistent ID throughout its visible duration.
+- Each detected entity is assigned a consistent internal tracking ID throughout its visible duration. 
+IDs are used for tracking stability and team locking, but are not rendered visually to avoid clutter.
 
 ### 3.4 Team Classification
 
@@ -70,8 +71,8 @@ To improve accuracy and reduce detection of non-relevant people:
 For each input video, the system produces:
 - Annotated Video:
   - Bounding boxes
-  - Entity IDs
   - Team-based coloring
+  - Internally consistent tracking (IDs maintained internally but not displayed)
 
 - Tactical Map Video:
   - 2D top-down visualization
