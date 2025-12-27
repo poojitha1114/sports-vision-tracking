@@ -1,5 +1,0 @@
-venv/
-__pycache__/
-*.mp4
-output/
-*.pt
