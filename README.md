@@ -22,10 +22,10 @@ Tracked entities include:
 - Number of videos: 5
 
 - Video characteristics:
-        - Mixed camera behavior (fixed and moving)
-         - Different court orientations (North–South and East–West)
-        - Presence of extra players and audience near court boundaries
-        - Small, fast-moving ball with occasional occlusion
+  - Mixed camera behavior (fixed and moving)
+  - Different court orientations (North–South and East–West)
+  - Presence of extra players and audience near court boundaries
+  - Small, fast-moving ball with occasional occlusion
 
 ## 3. Approach
 ### 3.1 Detection
@@ -157,17 +157,17 @@ Referee classification using motion and positional priors
 
 Event detection (serve, spike, rally transitions)
 
-8. How to Run
-# Activate virtual environment
+## 8. How to Run
+ Activate virtual environment
 venv\Scripts\activate
 
-# Install dependencies
+ Install dependencies
 pip install -r requirements.txt
 
-# Run pipeline
+Run pipeline
 python src/main.py
 
-9. Conclusion
+## 9. Conclusion
 
 This project demonstrates an end-to-end computer vision pipeline for sports analytics, balancing accuracy, robustness, and practical constraints.
 While not a replacement for professional Hawk-Eye systems, it provides a clear, extensible foundation aligned with real-world sports CV challenges.
